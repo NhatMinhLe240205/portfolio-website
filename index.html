@@ -1,255 +1,310 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My First Website</title>
+  <title>Nhat Minh LE — Portfolio</title>
   <link rel="stylesheet" href="styles/index.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-  <!-- navigation bar -->
-  <div class="nav-bar">
+  <!-- NAV BAR -->
+  <nav class="nav-bar" id="navbar">
     <div id="logo"></div>
-    
-    <nav name="nav-tab">
-        <a href="index.html">ACCUEIL</a>
-        <a href="#about-me">À PROPOS</a>
-        <a href="#projects">PROJETS</a>
-        <a href="#contact">CONTACT</a>
-    </nav>
 
-    <div class="burger" id="burger">
-      <div></div>
-      <div></div>
-      <div></div>
+    <div class="nav-links" id="nav-links">
+      <a href="#home"     class="nav-link">ACCUEIL</a>
+      <a href="#about-me" class="nav-link">À PROPOS</a>
+      <a href="#skills"   class="nav-link">COMPÉTENCES</a>
+      <a href="#projects" class="nav-link">PROJETS</a>
+      <a href="#contact"  class="nav-link">CONTACT</a>
     </div>
 
-  </div>
-  <!-- /navigation bar -->
+    <button class="burger" id="burger" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
 
-  <!-- hero section -->
-  <div class="welcome-box">
-    <div class = "logo-hello">
-        <h1>Hello, World! </h1>
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#home"       class="mobile-link">ACCUEIL</a>
+    <a href="#about-me"   class="mobile-link">À PROPOS</a>
+    <a href="#skills"     class="mobile-link">COMPÉTENCES</a>
+    <a href="#education"  class="mobile-link">ÉDUCATION</a>
+    <a href="#experience" class="mobile-link">EXPÉRIENCE</a>
+    <a href="#projects"   class="mobile-link">PROJETS</a>
+    <a href="#contact"    class="mobile-link">CONTACT</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero-section" id="home">
+    <div class="hero-content">
+      <p class="hero-greeting">// hello, world!</p>
+      <h1 class="hero-name">Nhat Minh <span class="accent">LE</span></h1>
+      <p class="hero-sub"><span id="typewriter"></span></p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn-primary">Voir mes projets</a>
+        <a href="#contact"  class="btn-secondary">Me contacter</a>
+      </div>
     </div>
-  </div>
-  <!-- /hero section -->
-
-  <!-- about section -->
-  <div class="presentation-box">
-    <div class="presentation-background"></div>
-    
-    <div class="presentation-overlay">
-      <h1 class = "title" id="about-me">À PROPOS</h1>
-      <p class = "white font-fira">
-        Bienvenue sur mon site web personnel ! <br>
-        Je suis ravi de partager avec vous mon parcours dans le monde du développement informatique. Fasciné depuis mon plus jeune âge par la technologie et ses possibilités infinies, je suis venu en France pour développer mes compétences et enrichir ma carrière. Adaptable, motivé et curieux, j'apprends vite et m'investis pleinement dans les projets qui me sont confiés. Toujours avide d'apprendre, je recherche constamment de nouveaux défis et évolue dans un environnement dynamique.
-      </p>
+    <div class="hero-decoration">
+      <div class="code-block">
+        <div class="code-dots"><span></span><span></span><span></span></div>
+        <span class="code-line"><span class="kw">const</span> dev = {</span>
+        <span class="code-line indent"><span class="prop">name</span>: <span class="str">"Nhat Minh LE"</span>,</span>
+        <span class="code-line indent"><span class="prop">location</span>: <span class="str">"Paris, France"</span>,</span>
+        <span class="code-line indent"><span class="prop">formation</span>: <span class="str">"B.U.T Informatique"</span>,</span>
+        <span class="code-line indent"><span class="prop">passion</span>: <span class="str">"coding"</span>,</span>
+        <span class="code-line indent"><span class="prop">status</span>: <span class="str">"open to opportunities"</span></span>
+        <span class="code-line">};</span>
+      </div>
     </div>
-    <div class="presentation-image"></div>
-  </div>
-  <!-- /about section -->
+  </section>
 
-  <!-- skills section -->
-  <div class="skills-box">
-    <h1 class="title" id="skills">COMPÉTENCES</h1>
+  <!-- ABOUT -->
+  <section class="section reveal" id="about-me">
+    <div class="section-header">
+      <span class="section-tag">// 01</span>
+      <h2 class="section-title">À PROPOS</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-image-wrapper">
+        <div class="about-image"></div>
+        <div class="about-image-border"></div>
+      </div>
+      <div class="about-text">
+        <p class="about-body">
+          Bienvenue sur mon site web personnel !<br><br>
+          Je suis ravi de partager avec vous mon parcours dans le monde du développement informatique. Fasciné depuis mon plus jeune âge par la technologie et ses possibilités infinies, je suis venu en France pour développer mes compétences et enrichir ma carrière.<br><br>
+          Adaptable, motivé et curieux, j'apprends vite et m'investis pleinement dans les projets qui me sont confiés. Toujours avide d'apprendre, je recherche constamment de nouveaux défis et évolue dans un environnement dynamique.
+        </p>
+        <div class="about-chips">
+          <span class="chip">🎓 IUT d'Orsay</span>
+          <span class="chip">📍 Paris, France</span>
+          <span class="chip">🇻🇳 Hanoï, Vietnam</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- SKILLS -->
+  <section class="section reveal" id="skills">
+    <div class="section-header">
+      <span class="section-tag">// 02</span>
+      <h2 class="section-title">COMPÉTENCES</h2>
+    </div>
     <div class="skills-grid">
-
-        <div class="skill-item">
-            <i class="fa-brands fa-html5 "></i>
-            <h3 class="white">HTML</h3>
-            <p class="level white font-fira">Basic</p>
-        </div>
-
-        <div class="skill-item">
-            <i class="fa-brands fa-css3-alt "></i>
-            <h3 class="white">CSS</h3>
-            <p class="level white font-fira">Basic</p>
-        </div>
-
-        <div class="skill-item">
-            <i class="fa-brands fa-js "></i>
-            <h3 class="white">JavaScript</h3>
-            <p class="level white font-fira">Basic</p>
-        </div>
-
-        <div class="skill-item">
-            <i class="fa-brands fa-python "></i>
-            <h3 class="white">Python</h3>
-            <p class="level white font-fira">Intermidiate</p>
-        </div>
-
-        <div class="skill-item">
-            <i class="fa-brands fa-java "></i>
-            <h3 class="white">Java</h3>
-            <p class="level white font-fira">Intermidiate</p>
-        </div>
-
-        <div class="skill-item">
-            <i class="fa-solid fa-code "></i>
-            <h3 class="white">C++</h3>
-            <p class="level white font-fira">Basic</p>
-        </div>
-
-        <div class="skill-item">
-            <i class="fa-solid fa-c "></i>
-            <h3 class="white">C</h3>
-            <p class="level white font-fira">Basic</p>
-        </div>
-
-        <div class="skill-item">
-            <i class="fa-solid fa-database "></i>
-            <h3 class="white">SQL</h3>
-            <p class="level white font-fira">Intermidiate</p>
-        </div>
-
-        <div class="skill-item">
-            <i class="fa-brands fa-php "></i>
-            <h3 class="white">PHP</h3>
-            <p class="level white font-fira">Basic</p>
-        </div>
-
-        <div class="skill-item">
-            <i class="fa-brands fa-github "></i>
-            <h3 class="white">GitHub</h3>
-            <p class="level white font-fira">Intermidiate</p>
-        </div>
-
-        <div class="skill-item">
-            <i class="fa-solid fa-file-word "></i>
-            <h3 class="white">Office</h3>
-            <p class="level white font-fira">Advanced</p>
-        </div>
-
-        <div class="skill-item">
-            <i class="fa-brands fa-figma "></i>
-            <h3 class="white">Figma</h3>
-            <p class="level white font-fira">Intermidiate</p>
-        </div>
-
+      <div class="skill-item" data-level="basic">
+        <i class="fa-brands fa-html5"></i>
+        <h3>HTML</h3>
+        <span class="level-badge">Basic</span>
+      </div>
+      <div class="skill-item" data-level="basic">
+        <i class="fa-brands fa-css3-alt"></i>
+        <h3>CSS</h3>
+        <span class="level-badge">Basic</span>
+      </div>
+      <div class="skill-item" data-level="basic">
+        <i class="fa-brands fa-js"></i>
+        <h3>JavaScript</h3>
+        <span class="level-badge">Basic</span>
+      </div>
+      <div class="skill-item" data-level="intermediate">
+        <i class="fa-brands fa-python"></i>
+        <h3>Python</h3>
+        <span class="level-badge">Intermédiaire</span>
+      </div>
+      <div class="skill-item" data-level="intermediate">
+        <i class="fa-brands fa-java"></i>
+        <h3>Java</h3>
+        <span class="level-badge">Intermédiaire</span>
+      </div>
+      <div class="skill-item" data-level="basic">
+        <i class="fa-solid fa-code"></i>
+        <h3>C++</h3>
+        <span class="level-badge">Basic</span>
+      </div>
+      <div class="skill-item" data-level="basic">
+        <i class="fa-solid fa-c"></i>
+        <h3>C</h3>
+        <span class="level-badge">Basic</span>
+      </div>
+      <div class="skill-item" data-level="intermediate">
+        <i class="fa-solid fa-database"></i>
+        <h3>SQL</h3>
+        <span class="level-badge">Intermédiaire</span>
+      </div>
+      <div class="skill-item" data-level="basic">
+        <i class="fa-brands fa-php"></i>
+        <h3>PHP</h3>
+        <span class="level-badge">Basic</span>
+      </div>
+      <div class="skill-item" data-level="intermediate">
+        <i class="fa-brands fa-github"></i>
+        <h3>GitHub</h3>
+        <span class="level-badge">Intermédiaire</span>
+      </div>
+      <div class="skill-item" data-level="advanced">
+        <i class="fa-solid fa-file-word"></i>
+        <h3>Office</h3>
+        <span class="level-badge">Avancé</span>
+      </div>
+      <div class="skill-item" data-level="intermediate">
+        <i class="fa-brands fa-figma"></i>
+        <h3>Figma</h3>
+        <span class="level-badge">Intermédiaire</span>
+      </div>
     </div>
-</div>
-  <!-- /skills section -->
+  </section>
 
-  <!-- education section -->
-  <div class="education-box">
-    <h1 class="title" id="education">EDUCATION</h1>
-
-    <div class="education-grid">
-        <div class="education-item">
-            <h2 class="white">IUT d'Orsay - Université de Paris Saclay</h2>
-            <p class="white">B.U.T Informatique - 2024-2027</p>
+  <!-- EDUCATION -->
+  <section class="section reveal" id="education">
+    <div class="section-header">
+      <span class="section-tag">// 03</span>
+      <h2 class="section-title">ÉDUCATION</h2>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <span class="timeline-date">2024 — 2027</span>
+          <h3>IUT d'Orsay — Université Paris-Saclay</h3>
+          <p>B.U.T Informatique</p>
         </div>
-
-        <div class="education-item">
-            <h2 class="white">Lycée de Hanoï - Amsterdam, Hanoï</h2>
-            <p class="white">Classe à option français - 2020-2023</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <span class="timeline-date">2020 — 2023</span>
+          <h3>Lycée Amsterdam — Hanoï</h3>
+          <p>Classe à option français</p>
         </div>
+      </div>
     </div>
-</div>
-  <!-- /education section -->
+  </section>
 
-<!-- experience section -->
-<div class="experience-box">
-  <h1 class="title" id="experience">EXPÉRIENCE</h1>
-
-  <div class="experience-container">
-
-    <div class="experience-item">
-      <h2>Serveur en restauration à Paris</h2>
-      <h3>Mam from Hanoi — Aout 2025 à Present</h3>
-      <p>
-        Accueil des clients, prise de commandes et service en salle. Travail en équipe pour assurer un service fluide et une bonne ambiance. Contribution au maintien de la propreté et au bon déroulement du service.
-      </p>
+  <!-- EXPERIENCE -->
+  <section class="section reveal" id="experience">
+    <div class="section-header">
+      <span class="section-tag">// 04</span>
+      <h2 class="section-title">EXPÉRIENCE</h2>
     </div>
-
-    <div class="experience-item">
-      <h2>Assistant des enseignants d’anglais</h2>
-      <h3>Cleverlearn My Dinh (Vietnam)</h3>
-      <p>
-        Accompagnement des élèves durant les cours, aide à la compréhension des activités et correction des exercices. Communication régulière avec les parents pour les informer des progrès et besoins de leurs enfants. Collaboration avec l’équipe enseignante afin d’assurer un suivi efficace et un environnement d’apprentissage positif.
-      </p>
+    <div class="experience-container">
+      <div class="experience-item">
+        <div class="exp-header">
+          <div>
+            <h2>Serveur en restauration à Paris</h2>
+            <h3>Mam from Hanoi <span class="exp-date">— Août 2025 → Présent</span></h3>
+          </div>
+          <span class="exp-tag">Part-time</span>
+        </div>
+        <p>Accueil des clients, prise de commandes et service en salle. Travail en équipe pour assurer un service fluide et une bonne ambiance. Contribution au maintien de la propreté et au bon déroulement du service.</p>
+      </div>
+      <div class="experience-item">
+        <div class="exp-header">
+          <div>
+            <h2>Assistant des enseignants d'anglais</h2>
+            <h3>Cleverlearn My Dinh, Vietnam</h3>
+          </div>
+          <span class="exp-tag">Part-time</span>
+        </div>
+        <p>Accompagnement des élèves durant les cours, aide à la compréhension des activités et correction des exercices. Communication régulière avec les parents pour les informer des progrès et besoins de leurs enfants.</p>
+      </div>
     </div>
+  </section>
 
-  </div>
-</div>
-
-
-
-<!-- /experience section -->
-
-
-  <!-- project section -->
-<div class="project-box">
-  <h1 class="title" id="projects">PROJETS</h1>
-  
-  <div class="project-grid">
-    <a class="project-item" id="project-movies" href="https://github.com/NhatMinhLe240205/movie-recommender">
-      <button>Movie Recommender</button>
-    </a>
-
-    <a class="project-item" id="twitter-bot" href="https://github.com/NhatMinhLe240205/twitter-comment-collector">
-      <button>Twitter Comment Collector</button>
-    </a>
-
-    <a class="project-item" id="ciup" href="https://github.com/NhatMinhLe240205/school-project-java-application">
-      <button>Application Java</button>
-    </a>
-
-    <a class="project-item" id="data-base" href="">
-      <button>Project Data Analyse</button>
-    </a>
-
-    <a class="project-item" id="minesweeper" href="https://github.com/NhatMinhLe240205/school-project-minesweeper">
-      <button>Minesweeper</button>
-    </a>
-
-    <a class="project-item" id="video-game" href="https://github.com/NhatMinhLe240205/school-project-simple-video-game">
-      <button>Simple Video Game</button>
-    </a>
-  </div>
-</div>
-
-<!-- /project section -->
-
-<!-- contact section -->
- <div class="contact-box" id="contact">
-  <h1 class="title">CONTACT</h1>
-
-  <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
-  <input type="hidden" name="access_key" value="e9af7e1e-ad31-4aca-8985-e7883c10cab6">
-
-    <div class="form-group">
-      <label>Nom et Prénom</label>
-      <input type="text" name="name" required>
+  <!-- PROJECTS -->
+  <section class="section reveal" id="projects">
+    <div class="section-header">
+      <span class="section-tag">// 05</span>
+      <h2 class="section-title">PROJETS</h2>
     </div>
-
-    <div class="form-group">
-      <label>Email</label>
-      <input type="email" name="email" required>
+    <div class="project-grid">
+      <a class="project-item" id="project-movies" href="https://github.com/NhatMinhLe240205/movie-recommender" target="_blank">
+        <div class="project-overlay">
+          <h3 class="project-name">Movie Recommender</h3>
+          <span class="project-link"><i class="fa-brands fa-github"></i> Voir sur GitHub</span>
+        </div>
+      </a>
+      <a class="project-item" id="twitter-bot" href="https://github.com/NhatMinhLe240205/twitter-comment-collector" target="_blank">
+        <div class="project-overlay">
+          <h3 class="project-name">Twitter Comment Collector</h3>
+          <span class="project-link"><i class="fa-brands fa-github"></i> Voir sur GitHub</span>
+        </div>
+      </a>
+      <a class="project-item" id="ciup" href="https://github.com/NhatMinhLe240205/school-project-java-application" target="_blank">
+        <div class="project-overlay">
+          <h3 class="project-name">Application Java</h3>
+          <span class="project-link"><i class="fa-brands fa-github"></i> Voir sur GitHub</span>
+        </div>
+      </a>
+      <a class="project-item" id="data-base" href="" target="_blank">
+        <div class="project-overlay">
+          <h3 class="project-name">Projet Data Analyse</h3>
+          <span class="project-link"><i class="fa-solid fa-lock"></i> Bientôt disponible</span>
+        </div>
+      </a>
+      <a class="project-item" id="minesweeper" href="https://github.com/NhatMinhLe240205/school-project-minesweeper" target="_blank">
+        <div class="project-overlay">
+          <h3 class="project-name">Minesweeper</h3>
+          <span class="project-link"><i class="fa-brands fa-github"></i> Voir sur GitHub</span>
+        </div>
+      </a>
+      <a class="project-item" id="video-game" href="https://github.com/NhatMinhLe240205/school-project-simple-video-game" target="_blank">
+        <div class="project-overlay">
+          <h3 class="project-name">Simple Video Game</h3>
+          <span class="project-link"><i class="fa-brands fa-github"></i> Voir sur GitHub</span>
+        </div>
+      </a>
     </div>
+  </section>
 
-    <div class="form-group">
-      <label>Message</label>
-      <textarea name="message" rows="5" required></textarea>
+  <!-- CONTACT -->
+  <section class="section reveal" id="contact">
+    <div class="section-header">
+      <span class="section-tag">// 06</span>
+      <h2 class="section-title">CONTACT</h2>
     </div>
+    <div class="contact-wrapper">
+      <div class="contact-info">
+        <p class="contact-sub">Vous souhaitez collaborer ou simplement dire bonjour ? N'hésitez pas à m'écrire — je lis tous les messages.</p>
+        <div class="contact-links">
+          <a href="https://github.com/NhatMinhLe240205" class="contact-social" target="_blank">
+            <i class="fa-brands fa-github"></i> GitHub
+          </a>
+        </div>
+      </div>
+      <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="e9af7e1e-ad31-4aca-8985-e7883c10cab6">
+        <div class="form-group">
+          <label>Nom et Prénom</label>
+          <input type="text" name="name" required placeholder="John Doe">
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" name="email" required placeholder="john@example.com">
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea name="message" rows="5" required placeholder="Votre message..."></textarea>
+        </div>
+        <button type="submit" class="contact-btn">
+          <span>Envoyer le message</span>
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </form>
+    </div>
+  </section>
 
-    <button type="submit" class="contact-btn">Envoyer le message</button>
-  </form>
-</div>
-
-<!-- /contact section -->
   <footer>
-    &copy; 2025 Nhat Minh LE
+    <span class="footer-text">© 2025 <span class="accent">Nhat Minh LE</span></span>
+    <a href="#home" class="back-top" aria-label="Retour en haut"><i class="fa-solid fa-arrow-up"></i></a>
   </footer>
+
+  <script src="scripts/index.js"></script>
 </body>
 </html>
-
-
-
-
